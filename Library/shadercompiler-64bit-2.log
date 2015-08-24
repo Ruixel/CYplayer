@@ -1,22 +1,22 @@
 Base path: C:/Program Files/Unity/Editor/Data
-Pipe name: \\.\pipe\UnityShaderCompiler-64bit-2-57688
+Pipe name: \\.\pipe\UnityShaderCompiler-64bit-2-14632
 Cmd: getPlatforms
 Cmd: compileSnippet
-  error: 2 plat 1 at (1): Compiled shader code uses too many instruction slots (112). Max. allowed by the target (ps_2_0) is 96.\nCompiling Fragment program
-  error: 2 plat 1 at (78): Too many math instructions for SM2.0 (99 needed, max is 64). Try #pragma target 3.0\nCompiling Fragment program
-  api=1 type=1 insize=4125 outsize=0 kw= ok=0
+  api=4 type=0 insize=1005 outsize=1274 kw= pd= ok=1
 Cmd: compileSnippet
-  error: 2 plat 1 at (1): Compiled shader code uses too many instruction slots (99). Max. allowed by the target (ps_2_0) is 96.\nCompiling Fragment program
-  error: 2 plat 1 at (114): Too many math instructions for SM2.0 (91 needed, max is 64). Try #pragma target 3.0\nCompiling Fragment program
-  api=1 type=1 insize=4130 outsize=0 kw= ok=0
+  api=1 type=1 insize=1005 outsize=185 kw= pd= ok=1
 Cmd: compileSnippet
-  error: 2 plat 1 at (1): Compiled shader code uses too many instruction slots (112). Max. allowed by the target (ps_2_0) is 96.\nCompiling Fragment program
-  error: 2 plat 1 at (78): Too many math instructions for SM2.0 (99 needed, max is 64). Try #pragma target 3.0\nCompiling Fragment program
-  api=1 type=1 insize=4125 outsize=0 kw= ok=0
+  api=4 type=1 insize=1517 outsize=892 kw= pd= ok=1
 Cmd: compileSnippet
-  error: 2 plat 1 at (1): Compiled shader code uses too many instruction slots (99). Max. allowed by the target (ps_2_0) is 96.\nCompiling Fragment program
-  error: 2 plat 1 at (114): Too many math instructions for SM2.0 (91 needed, max is 64). Try #pragma target 3.0\nCompiling Fragment program
-  api=1 type=1 insize=4130 outsize=0 kw= ok=0
+  api=8 type=1 insize=1126 outsize=1511 kw= pd=UNITY_NO_SCREENSPACE_SHADOWS UNITY_NO_LINEAR_COLORSPACE ok=1
+Cmd: compileSnippet
+  api=1 type=0 insize=1147 outsize=156 kw= pd= ok=1
+Cmd: compileSnippet
+  api=8 type=0 insize=1081 outsize=1828 kw= pd=UNITY_NO_SCREENSPACE_SHADOWS UNITY_NO_LINEAR_COLORSPACE ok=1
+Cmd: compileSnippet
+  api=8 type=1 insize=1081 outsize=1406 kw= pd=UNITY_NO_SCREENSPACE_SHADOWS UNITY_NO_LINEAR_COLORSPACE ok=1
+Cmd: compileSnippet
+  api=4 type=1 insize=1230 outsize=1038 kw= pd= ok=1
 Unhandled exception: Readfile from pipe failed. GLE=The pipe has been ended.
 
 

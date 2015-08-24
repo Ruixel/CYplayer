@@ -63,14 +63,14 @@
     <Reference Include="UnityEditor.iOS.Extensions.Xcode">
       <HintPath>Library\UnityAssemblies\UnityEditor.iOS.Extensions.Xcode.dll</HintPath>
     </Reference>
+    <Reference Include="NGUI">
+      <HintPath>Assets\NGUI\DLLs\NGUI.dll</HintPath>
+    </Reference>
     <Reference Include="Photon3Unity3D">
       <HintPath>Assets\Plugins\Photon3Unity3D.dll</HintPath>
     </Reference>
     <Reference Include="websocket-sharp">
       <HintPath>Assets\Plugins\WebSocket\websocket-sharp.dll</HintPath>
-    </Reference>
-    <Reference Include="NGUI">
-      <HintPath>Assets\NGUI\DLLs\NGUI.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>

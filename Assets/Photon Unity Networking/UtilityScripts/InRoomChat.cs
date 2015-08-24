@@ -49,9 +49,10 @@ public class InRoomChat : Photon.MonoBehaviour
 
         scrollPos = GUILayout.BeginScrollView(scrollPos);
         GUILayout.FlexibleSpace();
-        for (int i = messages.Count - 1; i >= 0; i--)
+        for (int i = 0; i < messages.Count; i++)
         {
             GUILayout.Label(messages[i]);
+            scrollPos.y = 10000000;
         }
         GUILayout.EndScrollView();
 

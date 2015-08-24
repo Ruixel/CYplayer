@@ -34,7 +34,8 @@ public class MultiplayerManager : MonoBehaviour
         baseLocation.SetActive(false);
         if (obj.GetComponent<PhotonView>().isMine)
         {
-            obj.GetComponent<FirstPersonController>().enabled = true;
+            obj.GetComponent<FPSController>().enabled = true;
+            obj.GetComponent<MouseLook>().enabled = true;
             obj.transform.Find("FirstPersonCharacter").gameObject.SetActive(true);
         }
 

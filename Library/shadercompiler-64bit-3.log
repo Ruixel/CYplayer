@@ -1,49 +1,23 @@
 Base path: C:/Program Files/Unity/Editor/Data
-Pipe name: \\.\pipe\UnityShaderCompiler-64bit-3-55244
+Pipe name: \\.\pipe\UnityShaderCompiler-64bit-3-5772
 Cmd: getPlatforms
 Cmd: compileSnippet
-  api=1 type=0 insize=955 outsize=131 kw= ok=1
+  api=8 type=0 insize=1306 outsize=1966 kw= pd=UNITY_NO_SCREENSPACE_SHADOWS UNITY_NO_LINEAR_COLORSPACE ok=1
 Cmd: compileSnippet
-  api=1 type=0 insize=954 outsize=131 kw= ok=1
+  api=8 type=1 insize=1306 outsize=1706 kw= pd=UNITY_NO_SCREENSPACE_SHADOWS UNITY_NO_LINEAR_COLORSPACE ok=1
 Cmd: compileSnippet
-  api=1 type=1 insize=2216 outsize=7052 kw= ok=1
+  api=4 type=0 insize=1517 outsize=1274 kw= pd= ok=1
 Cmd: compileSnippet
-  api=1 type=0 insize=2722 outsize=208 kw= ok=1
+  api=8 type=0 insize=1126 outsize=1966 kw= pd=UNITY_NO_SCREENSPACE_SHADOWS UNITY_NO_LINEAR_COLORSPACE ok=1
 Cmd: compileSnippet
-  api=1 type=1 insize=2722 outsize=12783 kw= ok=1
+  api=8 type=0 insize=1147 outsize=1706 kw= pd=UNITY_NO_SCREENSPACE_SHADOWS UNITY_NO_LINEAR_COLORSPACE ok=1
 Cmd: compileSnippet
-  api=0 type=1 insize=2998 outsize=6 kw= ok=1
+  api=1 type=0 insize=1081 outsize=169 kw= pd= ok=1
 Cmd: compileSnippet
-  api=1 type=0 insize=1938 outsize=146 kw= ok=1
+  api=4 type=0 insize=1230 outsize=1347 kw= pd= ok=1
 Cmd: compileSnippet
-  api=1 type=1 insize=1938 outsize=151 kw= ok=1
-Cmd: compileSnippet
-  api=1 type=1 insize=3195 outsize=127 kw= ok=1
-Cmd: compileSnippet
-  api=1 type=1 insize=3211 outsize=255 kw= ok=1
-Cmd: compileSnippet
-  api=1 type=0 insize=3203 outsize=258 kw= ok=1
-Cmd: compileSnippet
-  api=1 type=1 insize=3203 outsize=207 kw= ok=1
-Cmd: compileSnippet
-  api=1 type=0 insize=3212 outsize=267 kw= ok=1
-Cmd: compileSnippet
-  api=1 type=1 insize=3205 outsize=120 kw= ok=1
-Cmd: compileSnippet
-  api=1 type=0 insize=3201 outsize=258 kw= ok=1
-Cmd: compileSnippet
-  api=1 type=1 insize=3196 outsize=63 kw= ok=1
-Cmd: compileSnippet
-  api=1 type=0 insize=4605 outsize=131 kw= ok=1
-Cmd: compileSnippet
-  api=1 type=0 insize=4609 outsize=363 kw= ok=1
-Cmd: compileSnippet
-  api=1 type=1 insize=4614 outsize=648 kw= ok=1
-Cmd: compileSnippet
-  api=1 type=1 insize=4620 outsize=681 kw= ok=1
+  api=8 type=1 insize=1230 outsize=1560 kw= pd=UNITY_NO_SCREENSPACE_SHADOWS UNITY_NO_LINEAR_COLORSPACE ok=1
 Unhandled exception: Readfile from pipe failed. GLE=The pipe has been ended.
 
 
 Quitting shader compiler process
-
-Crashed!
