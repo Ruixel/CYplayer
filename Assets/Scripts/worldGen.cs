@@ -101,6 +101,7 @@ public class worldGen : MonoBehaviour {
 						ground.GetComponent<MeshRenderer>().material.mainTexture = getTexture (tex1, ground);
 					}
 					ground.GetComponent<MeshRenderer> ().material.mainTextureScale = new Vector2 ((2f * scale) / tex_x, (2f * scale) / tex_y);
+				    ground.AddComponent<MeshCollider>();
 
 					// Ceiling
 					GameObject ceil = Poly2Mesh.CreateGameObject(poly);

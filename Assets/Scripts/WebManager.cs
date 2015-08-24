@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 using UnityEngine.UI;
 using System.Collections;
 
@@ -7,12 +8,27 @@ public class WebManager : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		if (Application.isWebPlayer) {
-			Application.ExternalCall ("Loaded", "Success");
-		} else {
-			GameObject wg = GameObject.Find("WorldGenerator");
-			wg.SendMessage("Generate");
-		}
+        
+        text_obj.GetComponent<Text>().text = "Connecting to Multiplayer Server...";
+        GameObject netman = GameObject.Find("NetworkManager");
+        netman.GetComponent<MultiplayerManager>().initGame("TechDemo");
+        text_obj.GetComponent<Text>().text += "\nLoading Level...";
+	    try
+	    {
+	        if (Application.isWebPlayer)
+	        {
+	            Application.ExternalCall("Loaded", "Success");
+	        }
+	        else
+	        {
+	            GameObject wg = GameObject.Find("WorldGenerator");
+	            wg.SendMessage("Generate");
+	        }
+	    }
+	    catch (Exception e)
+	    {
+	        GiveError("Error :( :" + e.GetBaseException());
+	    }
 	}
 	
 	void LoadLevel(string gameNumber) {
@@ -23,6 +39,6 @@ public class WebManager : MonoBehaviour {
 	}
 
 	void GiveError(string err) {
-		text_obj.GetComponent<Text> ().text = err;
-	}
+		text_obj.GetComponent<Text> ().text += "\n" + err;
+    }
 }
