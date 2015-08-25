@@ -18,6 +18,7 @@ public class FPSController : Photon.MonoBehaviour
     private float syncTime = 0f;
     private Vector3 syncStartPosition = Vector3.zero;
     private Vector3 syncEndPosition = Vector3.zero;
+    private Quaternion rot;
 
 
 
@@ -43,6 +44,7 @@ public class FPSController : Photon.MonoBehaviour
     {
         syncTime += Time.deltaTime;
         GetComponent<Rigidbody>().position = Vector3.Lerp(syncStartPosition, syncEndPosition, syncTime / syncDelay);
+        transform.rotation = Quaternion.Lerp(transform.rotation, rot, syncTime / syncDelay);
     }
 
     void DoMove()
@@ -81,6 +83,7 @@ public class FPSController : Photon.MonoBehaviour
         {
             stream.SendNext(GetComponent<Rigidbody>().position);
             stream.SendNext(GetComponent<Rigidbody>().velocity);
+            stream.SendNext(transform.rotation);
         }
         else
         {
@@ -93,6 +96,8 @@ public class FPSController : Photon.MonoBehaviour
 
             syncEndPosition = syncPosition + syncVelocity * syncDelay;
             syncStartPosition = GetComponent<Rigidbody>().position;
+
+            rot = (Quaternion)stream.ReceiveNext();
         }
     }
 

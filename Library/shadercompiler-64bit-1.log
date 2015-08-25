@@ -1,62 +1,6 @@
 Base path: C:/Program Files/Unity/Editor/Data
-Pipe name: \\.\pipe\UnityShaderCompiler-64bit-1-13092
+Pipe name: \\.\pipe\UnityShaderCompiler-64bit-1-10844
 Cmd: getPlatforms
-Cmd: preprocess
-  insize=1934 outsize=930 ok=1
-Cmd: preprocess
-  insize=514 outsize=514 ok=1
-Cmd: preprocess
-  insize=2002 outsize=931 ok=1
-Cmd: preprocess
-  insize=569 outsize=569 ok=1
-Cmd: preprocess
-  insize=445 outsize=445 ok=1
-Cmd: preprocess
-  insize=456 outsize=456 ok=1
-Cmd: preprocess
-  insize=558 outsize=558 ok=1
-Cmd: preprocess
-  insize=1754 outsize=929 ok=1
-Cmd: preprocess
-  insize=1369 outsize=524 ok=1
-Cmd: compileSnippet
-  api=4 type=0 insize=1147 outsize=1209 kw= pd= ok=1
-Cmd: compileSnippet
-  api=4 type=1 insize=1147 outsize=1379 kw= pd= ok=1
-Cmd: preprocess
-  insize=1772 outsize=993 ok=1
-Cmd: compileSnippet
-  error: 2 plat 1 at (1): Compiled shader code uses too many instruction slots (112). Max. allowed by the target (ps_2_0) is 96.\nCompiling Fragment program
-  error: 2 plat 1 at (78): Too many math instructions for SM2.0 (99 needed, max is 64). Try #pragma target 3.0\nCompiling Fragment program
-  api=1 type=1 insize=4239 outsize=0 kw= pd= ok=0
-Cmd: compileSnippet
-  error: 2 plat 1 at (1): Compiled shader code uses too many instruction slots (99). Max. allowed by the target (ps_2_0) is 96.\nCompiling Fragment program
-  error: 2 plat 1 at (114): Too many math instructions for SM2.0 (91 needed, max is 64). Try #pragma target 3.0\nCompiling Fragment program
-  api=1 type=1 insize=4244 outsize=0 kw= pd= ok=0
-Cmd: compileSnippet
-  api=1 type=1 insize=1306 outsize=216 kw= pd= ok=1
-Cmd: compileSnippet
-  api=1 type=0 insize=1005 outsize=245 kw= pd= ok=1
-Cmd: compileSnippet
-  api=4 type=1 insize=1005 outsize=892 kw= pd= ok=1
-Cmd: compileSnippet
-  api=1 type=0 insize=1373 outsize=184 kw= pd= ok=1
-Cmd: compileSnippet
-  api=1 type=1 insize=1373 outsize=201 kw= pd= ok=1
-Cmd: compileSnippet
-  api=1 type=0 insize=1517 outsize=245 kw= pd= ok=1
-Cmd: compileSnippet
-  api=1 type=1 insize=1517 outsize=182 kw= pd= ok=1
-Cmd: compileSnippet
-  api=1 type=1 insize=1126 outsize=180 kw= pd= ok=1
-Cmd: compileSnippet
-  api=1 type=1 insize=1147 outsize=346 kw= pd= ok=1
-Cmd: compileSnippet
-  api=1 type=1 insize=1081 outsize=140 kw= pd= ok=1
-Cmd: compileSnippet
-  api=1 type=0 insize=1230 outsize=274 kw= pd= ok=1
-Cmd: compileSnippet
-  api=1 type=1 insize=1230 outsize=218 kw= pd= ok=1
 Cmd: compileSnippet
   error: 2 plat 1 at (1): Compiled shader code uses too many instruction slots (112). Max. allowed by the target (ps_2_0) is 96.\nCompiling Fragment program
   error: 2 plat 1 at (78): Too many math instructions for SM2.0 (99 needed, max is 64). Try #pragma target 3.0\nCompiling Fragment program

@@ -22,6 +22,7 @@ public class WebManager : MonoBehaviour {
 	        else
 	        {
 	            GameObject wg = GameObject.Find("WorldGenerator");
+	            wg.GetComponent<worldGen>().gameNumber = PlayerPrefs.GetInt("levelID");
 	            wg.SendMessage("Generate");
 	        }
 	    }

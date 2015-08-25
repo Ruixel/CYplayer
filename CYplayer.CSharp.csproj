@@ -252,6 +252,12 @@
     <Compile Include="Assets\Photon Unity Networking\UtilityScripts\SmoothSyncMovement.cs" />
     <Compile Include="Assets\Photon Unity Networking\UtilityScripts\SupportLogger.cs" />
     <Compile Include="Assets\Photon Unity Networking\UtilityScripts\TimeKeeper.cs" />
+    <Compile Include="Assets\Reporter\MultiKeyDictionary.cs" />
+    <Compile Include="Assets\Reporter\Reporter.cs" />
+    <Compile Include="Assets\Reporter\ReporterGUI.cs" />
+    <Compile Include="Assets\Reporter\ReporterMessageReceiver.cs" />
+    <Compile Include="Assets\Reporter\Test\Rotate.cs" />
+    <Compile Include="Assets\Reporter\Test\TestReporter.cs" />
     <Compile Include="Assets\Scripts\Chat.cs" />
     <Compile Include="Assets\Scripts\FPSController.cs" />
     <Compile Include="Assets\Scripts\MouseLook.cs" />
@@ -305,6 +311,7 @@
     <Compile Include="Assets\Scripts\generateWall.cs" />
     <Compile Include="Assets\Scripts\generateWall2.cs" />
     <Compile Include="Assets\Scripts\getPlayerName.cs" />
+    <Compile Include="Assets\Scripts\loadlevel.cs" />
     <Compile Include="Assets\Scripts\oldWorldGen.cs" />
     <Compile Include="Assets\Scripts\worldGen.cs" />
     <Compile Include="Assets\singleplayer.cs" />
@@ -410,6 +417,7 @@
     <None Include="Assets\Standard Assets\Effects\ToonShading\Shaders\ToonBasicOutline.shader" />
     <None Include="Assets\Standard Assets\Effects\ToonShading\Shaders\ToonLit.shader" />
     <None Include="Assets\Standard Assets\Effects\ToonShading\Shaders\ToonLitOutline.shader" />
+    <None Include="Assets\StreamingAssets\build_info.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\SyntaxTree\UnityVS\2015\UnityVS.CSharp.targets" />
 </Project>

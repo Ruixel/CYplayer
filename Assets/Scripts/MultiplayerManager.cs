@@ -11,11 +11,12 @@ public class MultiplayerManager : MonoBehaviour
     public GameObject objectToInstantiate;
     public GameObject baseLocation;
     public InputField username;
+    public InputField room;
    
 
     public void initGame(string connectionName)
     {
-        roomName = GameObject.Find("WorldGenerator").GetComponent<worldGen>().gameNumber.ToString();
+        roomName = GameObject.Find("WorldGenerator").GetComponent<worldGen>().gameNumber.ToString() + room.text;
         PhotonNetwork.ConnectUsingSettings(connectionName);
         textobject.SetActive(true);
     }
@@ -25,7 +26,14 @@ public class MultiplayerManager : MonoBehaviour
     {
         PhotonNetwork.playerName = username.text;
         textobject.SetActive(false);
-        PhotonNetwork.JoinOrCreateRoom(roomName, null, null);
+        PhotonNetwork.JoinRoom(roomName,true);
+    }
+
+    public void create()
+    {
+        PhotonNetwork.playerName = username.text;
+        textobject.SetActive(false);
+        PhotonNetwork.CreateRoom(roomName, true, true, 16);
     }
 
     void OnJoinedRoom()

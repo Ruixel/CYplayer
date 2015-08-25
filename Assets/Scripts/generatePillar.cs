@@ -69,7 +69,7 @@ public class generatePillar : MonoBehaviour {
 			return textures[0];
 		case 2:
 			tex_x = 1.2f; tex_y = 4.8f;
-			go.GetComponent<MeshRenderer>().material.shader = Shader.Find("Transparent/Diffuse");
+			go.GetComponent<MeshRenderer>().material.shader = Shader.Find("Legacy Shaders/Transparent/Diffuse");
 			return textures[2];
 		case 3:
 			tex_x = 4f; tex_y = 4.8f;
@@ -88,7 +88,7 @@ public class generatePillar : MonoBehaviour {
 			return textures[9];
 		case 8:
 			tex_x = 3f; tex_y = 4.8f;
-			go.GetComponent<MeshRenderer>().material.shader = Shader.Find("Transparent/Diffuse");
+			go.GetComponent<MeshRenderer>().material.shader = Shader.Find("Legacy Shaders/Transparent/Diffuse");
 			return textures[3];
 		case 9:
 			tex_x = 4f; tex_y = 4.8f;

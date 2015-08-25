@@ -77,7 +77,8 @@ public class generateWall2 : MonoBehaviour {
 		return new Color32 (red, green, blue, 1);
 	}
 
-	Texture getTexture(string tex, GameObject go) {
+	Texture getTexture(string tex, GameObject go)
+	{
 		int t = int.Parse (tex);
 		switch (t) {
 		case 1:
@@ -85,8 +86,8 @@ public class generateWall2 : MonoBehaviour {
 			return textures[0];
 		case 2:
 			tex_x = 1.2f; tex_y = 4.8f;
-			go.GetComponent<MeshRenderer>().material.shader = Shader.Find("Transparent/Diffuse");
-			return textures[2];
+			go.GetComponent<MeshRenderer>().material.shader = Shader.Find("Legacy Shaders/Transparent/Diffuse");
+                return textures[2];
 		case 3:
 			tex_x = 4f; tex_y = 4.8f;
 			return textures[1];
@@ -104,8 +105,8 @@ public class generateWall2 : MonoBehaviour {
 			return textures[9];
 		case 8:
 			tex_x = 3f; tex_y = 4.8f;
-			go.GetComponent<MeshRenderer>().material.shader = Shader.Find("Transparent/Diffuse");
-			return textures[3];
+			go.GetComponent<MeshRenderer>().material.shader = Shader.Find("Legacy Shaders/Transparent/Diffuse");
+                return textures[3];
 		case 9:
 			tex_x = 4f; tex_y = 4.8f;
 			return textures[8];
