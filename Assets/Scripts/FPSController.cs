@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.IO;
 
 [RequireComponent(typeof(Rigidbody))]
 [RequireComponent(typeof(CapsuleCollider))]
@@ -18,7 +19,8 @@ public class FPSController : Photon.MonoBehaviour
     private float syncTime = 0f;
     private Vector3 syncStartPosition = Vector3.zero;
     private Vector3 syncEndPosition = Vector3.zero;
-    private Quaternion rot;
+    public Quaternion rot = Quaternion.identity;
+    public Vector3 pos = Vector3.zero;
 
 
 
@@ -28,7 +30,7 @@ public class FPSController : Photon.MonoBehaviour
         GetComponent<Rigidbody>().useGravity = false;
     }
 
-    void LateUpdate()
+    void Update()
     {
         if (GetComponent<PhotonView>().isMine)
         {
@@ -43,21 +45,25 @@ public class FPSController : Photon.MonoBehaviour
     private void SyncedMovement()
     {
         syncTime += Time.deltaTime;
-        GetComponent<Rigidbody>().position = Vector3.Lerp(syncStartPosition, syncEndPosition, syncTime / syncDelay);
-        transform.rotation = Quaternion.Lerp(transform.rotation, rot, syncTime / syncDelay);
+        transform.localPosition = Vector3.Lerp(transform.position, pos, syncTime / syncDelay);
+        transform.localRotation = Quaternion.Lerp(transform.rotation, rot, syncTime / syncDelay);
     }
 
     void DoMove()
     {
+
+        Vector3 velocity = new Vector3(0,0,0);
         if (grounded)
         {
+
             // Calculate how fast we should be moving
             Vector3 targetVelocity = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
             targetVelocity = transform.TransformDirection(targetVelocity);
             targetVelocity *= speed;
 
+
             // Apply a force that attempts to reach our target velocity
-            Vector3 velocity = GetComponent<Rigidbody>().velocity;
+            velocity = GetComponent<Rigidbody>().velocity;
             Vector3 velocityChange = (targetVelocity - velocity);
             velocityChange.x = Mathf.Clamp(velocityChange.x, -maxVelocityChange, maxVelocityChange);
             velocityChange.z = Mathf.Clamp(velocityChange.z, -maxVelocityChange, maxVelocityChange);
@@ -71,6 +77,7 @@ public class FPSController : Photon.MonoBehaviour
             }
         }
 
+
         // We apply gravity manually for more tuning control
         GetComponent<Rigidbody>().AddForce(new Vector3(0, -gravity * GetComponent<Rigidbody>().mass, 0));
 
@@ -81,23 +88,18 @@ public class FPSController : Photon.MonoBehaviour
     {
         if (stream.isWriting)
         {
-            stream.SendNext(GetComponent<Rigidbody>().position);
-            stream.SendNext(GetComponent<Rigidbody>().velocity);
-            stream.SendNext(transform.rotation);
+            stream.SendNext(transform.localPosition);
+            stream.SendNext(transform.localRotation);
         }
         else
         {
-            Vector3 syncPosition = (Vector3)stream.ReceiveNext();
-            Vector3 syncVelocity = (Vector3)stream.ReceiveNext();
+            pos = (Vector3) stream.ReceiveNext();
+            rot = (Quaternion) stream.ReceiveNext();
 
             syncTime = 0f;
             syncDelay = Time.time - lastSynchronizationTime;
             lastSynchronizationTime = Time.time;
 
-            syncEndPosition = syncPosition + syncVelocity * syncDelay;
-            syncStartPosition = GetComponent<Rigidbody>().position;
-
-            rot = (Quaternion)stream.ReceiveNext();
         }
     }
 

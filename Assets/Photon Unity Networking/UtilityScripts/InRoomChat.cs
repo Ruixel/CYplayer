@@ -20,6 +20,12 @@ public class InRoomChat : Photon.MonoBehaviour
         {
             this.GuiRect.y = Screen.height - this.GuiRect.height;
         }
+        
+    }
+
+    void OnPhotonPlayerConnected()
+    {
+        this.photonView.RPC("Chat", PhotonTargets.All, "Joined Room.");
     }
 
     public void OnGUI()
@@ -67,6 +73,11 @@ public class InRoomChat : Photon.MonoBehaviour
         }
         GUILayout.EndHorizontal();
         GUILayout.EndArea();
+    }
+
+    void OnPhotonPlayerDisconnected()
+    {
+        this.photonView.RPC("Chat", PhotonTargets.All, "Left room.");
     }
 
     [PunRPC]
