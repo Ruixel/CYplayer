@@ -1,0 +1,18 @@
+﻿<Properties>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\CYParser\generateMsgBoard.cs">
+    <Files>
+      <File FileName="Assets\Scripts\CYParser\generateTriwall.cs" Line="34" Column="3" />
+      <File FileName="Assets\Scripts\CYParser\worldGen.cs" Line="228" Column="1" />
+      <File FileName="Assets\Scripts\CYParser\Poly2Mesh.cs" Line="149" Column="3" />
+      <File FileName="Assets\Scripts\CYParser\generatePlat.cs" Line="69" Column="55" />
+      <File FileName="Assets\Scripts\CYParser\generateRamp.cs" Line="32" Column="15" />
+      <File FileName="Assets\Scripts\CYParser\generateWall2.cs" Line="80" Column="2" />
+      <File FileName="Assets\Scripts\CYParser\generateMsgBoard.cs" Line="48" Column="1" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>

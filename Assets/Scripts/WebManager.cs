@@ -8,7 +8,7 @@ public class WebManager : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-        
+		PlayerPrefs.SetInt ("levelID", GameObject.Find ("WorldGenerator").GetComponent<worldGen> ().gameNumber);
         text_obj.GetComponent<Text>().text = "Connecting to Multiplayer Server...";
         GameObject netman = GameObject.Find("NetworkManager");
         netman.GetComponent<MultiplayerManager>().initGame("TechDemo");
