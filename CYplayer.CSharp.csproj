@@ -54,17 +54,11 @@
     </Reference>
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Xml.Linq" />
-    <Reference Include="UnityEngine.Advertisements">
-      <HintPath>Library\UnityAssemblies\UnityEngine.Advertisements.dll</HintPath>
-    </Reference>
     <Reference Include="UnityEngine.UI">
       <HintPath>Library\UnityAssemblies\UnityEngine.UI.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.Networking">
       <HintPath>Library\UnityAssemblies\UnityEngine.Networking.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.Analytics">
-      <HintPath>Library\UnityAssemblies\UnityEngine.Analytics.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.iOS.Extensions.Xcode">
       <HintPath>Library\UnityAssemblies\UnityEditor.iOS.Extensions.Xcode.dll</HintPath>
@@ -264,12 +258,24 @@
     <Compile Include="Assets\Reporter\ReporterMessageReceiver.cs" />
     <Compile Include="Assets\Reporter\Test\Rotate.cs" />
     <Compile Include="Assets\Reporter\Test\TestReporter.cs" />
+    <Compile Include="Assets\Scripts\CYParser\Poly2Mesh.cs" />
+    <Compile Include="Assets\Scripts\CYParser\generateMsgBoard.cs" />
+    <Compile Include="Assets\Scripts\CYParser\generatePillar.cs" />
+    <Compile Include="Assets\Scripts\CYParser\generatePlat.cs" />
+    <Compile Include="Assets\Scripts\CYParser\generateQuad.cs" />
+    <Compile Include="Assets\Scripts\CYParser\generateRamp.cs" />
+    <Compile Include="Assets\Scripts\CYParser\generateTriwall.cs" />
+    <Compile Include="Assets\Scripts\CYParser\generateWall.cs" />
+    <Compile Include="Assets\Scripts\CYParser\generateWall2.cs" />
+    <Compile Include="Assets\Scripts\CYParser\worldGen.cs" />
     <Compile Include="Assets\Scripts\Chat.cs" />
     <Compile Include="Assets\Scripts\FPSController.cs" />
+    <Compile Include="Assets\Scripts\FirstPersonController.cs" />
+    <Compile Include="Assets\Scripts\HeadBob.cs" />
     <Compile Include="Assets\Scripts\MouseLook.cs" />
+    <Compile Include="Assets\Scripts\MouseLook2.cs" />
     <Compile Include="Assets\Scripts\MultiplayerManager.cs" />
     <Compile Include="Assets\Scripts\PlayerNamegen.cs" />
-    <Compile Include="Assets\Scripts\Poly2Mesh.cs" />
     <Compile Include="Assets\Scripts\Poly2Tri\Triangulation\Delaunay\DelaunayTriangle.cs" />
     <Compile Include="Assets\Scripts\Poly2Tri\Triangulation\Delaunay\Sweep\AdvancingFront.cs" />
     <Compile Include="Assets\Scripts\Poly2Tri\Triangulation\Delaunay\Sweep\AdvancingFrontNode.cs" />
@@ -306,20 +312,14 @@
     <Compile Include="Assets\Scripts\Poly2Tri\Utility\Point2DList.cs" />
     <Compile Include="Assets\Scripts\Poly2Tri\Utility\Rect2D.cs" />
     <Compile Include="Assets\Scripts\PolygonAndHoles.cs" />
+    <Compile Include="Assets\Scripts\RigidbodyFirstPersonController.cs" />
     <Compile Include="Assets\Scripts\Roll.cs" />
     <Compile Include="Assets\Scripts\SmoothMouseLook.cs" />
     <Compile Include="Assets\Scripts\WebManager.cs" />
     <Compile Include="Assets\Scripts\cam.cs" />
-    <Compile Include="Assets\Scripts\generateMsgBoard.cs" />
-    <Compile Include="Assets\Scripts\generatePillar.cs" />
-    <Compile Include="Assets\Scripts\generatePlat.cs" />
-    <Compile Include="Assets\Scripts\generateQuad.cs" />
-    <Compile Include="Assets\Scripts\generateWall.cs" />
-    <Compile Include="Assets\Scripts\generateWall2.cs" />
     <Compile Include="Assets\Scripts\getPlayerName.cs" />
     <Compile Include="Assets\Scripts\loadlevel.cs" />
     <Compile Include="Assets\Scripts\oldWorldGen.cs" />
-    <Compile Include="Assets\Scripts\worldGen.cs" />
     <Compile Include="Assets\singleplayer.cs" />
   </ItemGroup>
   <ItemGroup>

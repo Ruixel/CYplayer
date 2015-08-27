@@ -1,7 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
 using UnityEngine.UI;
-using UnityStandardAssets.Characters.FirstPerson;
 
 public class MultiplayerManager : MonoBehaviour
 {
@@ -39,12 +38,13 @@ public class MultiplayerManager : MonoBehaviour
     void OnJoinedRoom()
     {
         GameObject obj = (GameObject)PhotonNetwork.Instantiate(objectToInstantiate.name, baseLocation.transform.position, Quaternion.identity, 0);
+        obj.GetComponent<MouseLook>().enabled = false ;
         baseLocation.SetActive(false);
         if (obj.GetComponent<PhotonView>().isMine)
         {
-            obj.GetComponent<FPSController>().enabled = true;
+            obj.GetComponent<FirstPersonController>().enabled = true;
             obj.GetComponent<MouseLook>().enabled = true;
-            obj.transform.Find("FirstPersonCharacter").gameObject.SetActive(true);
+            obj.transform.FindChild("FirstPersonCharacter").gameObject.SetActive(true);
         }
 
         
